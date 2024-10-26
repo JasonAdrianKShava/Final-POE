@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f5f5f5;
+}
+header, footer {
+    background-color: #2b4242;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+header img {
+    width: 100px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.hero-section, .pricing-section, .contact-section {
+    text-align: center;
+    padding: 30px 0;
+}
+.plans {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+.plan-card, .contact-form {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.contact-form button, .hero-section button, .plan-card button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #2B4242;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header .logo {
+    width: 60px;
+    margin-right: 10px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4a90e2;
+}
+
+/* Course Types Section */
+.course-types {
+    padding: 50px 20px;
+    background-color: #E5F5F9;
+    text-align: center;
+}
+
+.course-types h2 {
+    color: #2B4242;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.course-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.course-category {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.course-category h3 {
+    color: #2B4242;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.course-category p {
+    color: #4a90e2;
+    font-size: 1rem;
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.pricing-section h2 {
+    font-size: 2rem;
+    color: #2B4242;
+    margin-bottom: 20px;
+}
+
+.pricing-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.pricing-card h3 {
+    color: #2B4242;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.pricing-card p {
+    font-size: 1.2rem;
+    color: #4a90e2;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-card li {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #2B4242;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
