@@ -1,183 +1,234 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f5f5f5;
-}
-header, footer {
-    background-color: #2b4242;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
-}
-header img {
-    width: 100px;
-}
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 10px 0;
-}
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-.hero-section, .pricing-section, .contact-section {
-    text-align: center;
-    padding: 30px 0;
-}
-.plans {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-}
-.plan-card, .contact-form {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-.contact-form button, .hero-section button, .plan-card button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #4a90e2;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-footer {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    color: #333;
-    background-color: #f4f4f4;
+    padding: 0;
+    color: #e0e0e0;
+    background-color: #1a1a1a;
+    overflow-x: hidden;
 }
 
+/* Header and Navigation */
 header {
-    background-color: #2B4242;
-    color: #fff;
-    padding: 15px 0;
+    background-color: #1f2b3a;
+    color: #ffffff;
+    padding: 20px 0;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-header .logo {
-    width: 60px;
+header img {
+    width: 80px;
     margin-right: 10px;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
 nav a {
-    color: #fff;
-    margin: 0 15px;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
     transition: color 0.3s ease;
 }
 
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #00d9ff;
+    left: 50%;
+    bottom: -5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
 nav a:hover {
-    color: #4a90e2;
+    color: #00d9ff;
+}
+
+/* Container for consistent page width */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1f2b3a, #2e3d52);
+    color: #ffffff;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+.hero-section button {
+    padding: 12px 25px;
+    background-color: #00d9ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(0, 217, 255, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-section button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 25px rgba(0, 217, 255, 0.6);
+}
+
+/* Dropdown Menu for Courses */
+.course-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.course-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.course-dropdown:hover .course-dropdown-content {
+    display: block;
+}
+
+.course-dropdown-content a {
+    color: #e0e0e0;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.course-dropdown-content a:hover {
+    background-color: #444;
 }
 
 /* Course Types Section */
 .course-types {
-    padding: 50px 20px;
-    background-color: #E5F5F9;
+    padding: 60px 20px;
+    background-color: #222831;
     text-align: center;
+    color: #e0e0e0;
+    border-radius: 15px;
+    margin: 20px 0;
 }
 
 .course-types h2 {
-    color: #2B4242;
-    font-size: 2rem;
-    margin-bottom: 10px;
+    color: #00d9ff;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
 }
 
 .course-categories {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
     margin-top: 20px;
 }
 
 .course-category {
-    background-color: #fff;
+    background-color: #333;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .course-category h3 {
-    color: #2B4242;
-    font-size: 1.2rem;
-    margin-bottom: 5px;
+    color: #00d9ff;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
 }
 
 .course-category p {
-    color: #4a90e2;
+    color: #9fb1c5;
     font-size: 1rem;
 }
 
 /* Pricing Section */
 .pricing-section {
-    padding: 50px 20px;
+    padding: 60px 20px;
+    background-color: #1f2b3a;
     text-align: center;
-    background-color: #f4f4f4;
+    color: #e0e0e0;
 }
 
 .pricing-section h2 {
-    font-size: 2rem;
-    color: #2B4242;
+    font-size: 2.2rem;
+    color: #00d9ff;
     margin-bottom: 20px;
 }
 
 .pricing-cards {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .pricing-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #333;
+    padding: 25px;
+    border-radius: 15px;
+    width: 280px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .pricing-card h3 {
-    color: #2B4242;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    color: #00d9ff;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
 }
 
 .pricing-card p {
-    font-size: 1.2rem;
-    color: #4a90e2;
+    font-size: 1.3rem;
+    color: #9fb1c5;
 }
 
 .pricing-card ul {
@@ -186,16 +237,188 @@ nav a:hover {
 }
 
 .pricing-card li {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin: 10px 0;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #2e3d52;
+    color: #e0e0e0;
+}
+
+.contact-form {
+    border: none;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #9fb1c5;
+}
+
+.contact-form button {
+    padding: 12px 30px;
+    background-color: #00d9ff;
+    color: #ffffff;
+    border: none;
     font-size: 1rem;
-    color: #333;
-    margin: 5px 0;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(0, 217, 255, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 25px rgba(0, 217, 255, 0.6);
 }
 
 /* Footer */
 footer {
-    background-color: #2B4242;
-    color: #fff;
+    background-color: #1f2b3a;
+    color: #9fb1c5;
     text-align: center;
     padding: 20px 0;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+/* Style the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
+/* Style the dropdown button */
+.dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the dropdown content */
+.dropdown-content {
+    display: none; /* Hide by default */
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+/* Center the form and align fields vertically */
+.contact-section {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#contact-form label {
+    align-self: flex-start;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    max-width: 400px; /* Optional: to limit the width of input fields */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#contact-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+#contact-form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #555;
+}
+
+/* Styling for the "Back" button */
+.contact-section button[onclick="history.back()"] {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.contact-section button[onclick="history.back()"]:hover {
+    background-color: #555;
+}
+/* Back button styling */
+button.back-button {
+    background-color: #021231; /* Dark green color for contrast */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Hover effect for back button */
+button.back-button:hover {
+    background-color: hsl(213, 90%, 8%); /* Slightly lighter green on hover */
+}
