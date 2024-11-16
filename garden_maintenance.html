@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Maintenance Course - Empowering the Nation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="_images/Empowering (1).png" alt="Empowering the Nation Logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+    <section class="course-section">
+        <h1>Garden Maintenance Course</h1>
+        <p>Learn techniques for garden upkeep, including plant care, pruning, and soil management to keep your garden thriving year-round.</p>
+        <ul>
+            <li><strong>Duration:</strong> 6 weeks</li>
+            <li><strong>Level:</strong> Beginner to Intermediate</li>
+            <li><strong>Cost:</strong> Included in Premium Plan</li>
+        </ul>
+         <!-- Adding the new image -->
+         <img src="_images/regular-maintenance-service.jpg" alt="garden Maintenance" >
+    </section>
+ <!-- Payment Option Section -->
+ <section class="payment-section">
+    <h2>Enroll in the Course</h2>
+    <p>Select a plan to proceed with the payment:</p>
+    
+    <form id="payment-form">
+        <label for="plan">Choose a Plan:</label>
+        <select id="plan" name="plan">
+            <option value="200">Standard - $200</option>
+            <option value="300">Premium - $300</option>
+        </select>
+        <button type="button" onclick="processPayment()">Pay Now</button>
+    </form>
+    
+    <p id="payment-output"></p>
+</section>
+<!-- Back Button -->
+<button class="back-button" onclick="history.back()">Back</button>
+
+</div>
+
+<script>
+function processPayment() {
+    const plan = document.getElementById("plan").value;
+    document.getElementById("payment-output").textContent = `You have selected the plan costing $${plan}. Redirecting to payment...`;
+    
+    // Placeholder code for actual payment integration.
+    // Here, you could redirect to a payment gateway or initiate payment processing.
+}
+</script>
+
+<footer>
+<p>&copy; 2024 Empowering the Nation. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
